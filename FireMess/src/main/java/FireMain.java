@@ -37,36 +37,12 @@ public class FireMain {
 		
 				
 				List<String> registrationTokens = Arrays.asList(
-						"eBUq0Zo2TZE:APA91bHr7y4tOAwj_j2sw7GQr0Tdki0NgsL9Tf3aK7yk0h3G9rK5Ix7S0eNSYmYHGWM0GlP8PM-cMH7xpRebNLbBGg9m62EmARwvolBSaEynHmJz0KXX4Ann5e6zmjD4SiGDju45hV3t"
+						"SECRET_TOKEN"
 					);
 
-//				TopicManagementResponse response = FirebaseMessaging.getInstance().subscribeToTopic(
-//					    registrationTokens, "updates");
-//				
-//				System.out.println(response.getSuccessCount() + " tokens were subscribed successfully");
 
 
-//				TopicManagementResponse response = FirebaseMessaging.getInstance().unsubscribeFromTopic(
-//					    registrationTokens, "updates");
-//					// See the TopicManagementResponse reference documentation
-//					// for the contents of response.
-//					System.out.println(response.getSuccessCount() + " tokens were unsubscribed successfully");
-
-				String jaja = "easy? ";
-				String jak = "abby?";
-				
-				String berety = jaja.concat(jak);
-				
-				String topic = "updates";
-				
-//				 while(true) {
-//					 
-//										 
-//					 for (int i= 0; i<20; i++) {
-//					 
-//					 if (i%2==0) {
-//						
-//						 String ejee = Integer.toString(i);
+		
 				
 				while (true) {
 						 
@@ -84,38 +60,38 @@ public class FireMain {
 							
 							if (tempInt > 12) {
 //								
-//								String tempSTr = Integer.toString(tempInt);
 //								
-								Message message = Message.builder()
-									    .setNotification(new Notification(time, "Temperatura" + weatherReader.checkTemp()))
-									    .setTopic(topic)
-									    .build();
+//								
+					Message message = Message.builder()
+						.setNotification(new Notification(time, "Temperatura" + weatherReader.checkTemp()))
+						.setTopic(topic)
+						.build();
 								
 								
 
-									// Send a message to the devices subscribed to the provided topic.
-									String response = FirebaseMessaging.getInstance().send(message);
-									// Response is a message ID string.
-									System.out.println("Successfully sent message: " + response);
+					// Send a message to the devices subscribed to the provided topic.
+					String response = FirebaseMessaging.getInstance().send(message);
+					// Response is a message ID string.
+					System.out.println("Successfully sent message: " + response);
 								
 								
 							}
 						 
-							else {
+					else {
 								
 							
 							
-						 Message message = Message.builder()
-								    .setNotification(new Notification("temperatura nie zmienia siê ", ""))
-								    .setTopic(topic)
-								    .build();
+					Message message = Message.builder()
+						.setNotification(new Notification("temperatura nie zmienia siÃª ", ""))
+						.setTopic(topic)
+						.build();	 
 							
 							
 
-								// Send a message to the devices subscribed to the provided topic.
-								String response = FirebaseMessaging.getInstance().send(message);
-								// Response is a message ID string.
-								System.out.println("Successfully sent message: " + response);
+						// Send a message to the devices subscribed to the provided topic.
+						String response = FirebaseMessaging.getInstance().send(message);
+						// Response is a message ID string.
+						System.out.println("Successfully sent message: " + response);		
 							}
 						 Thread.sleep(10000);
 					}
